@@ -39,6 +39,7 @@ Express: Marco de aplicación web para crear API en Node.js.
 MongoDB: Base de datos NoSQL.  
 Mongoose: ODM para conectar y trabajar con MongoDB desde Node.js.  
 ESP32 y ESP32 CAM: Placas utilizadas para la capa física de los dispositivos.  
+Docker: Plataforma para desarrollar, enviar y ejecutar aplicaciones en contenedores, garantizando que la API funcione de manera consistente en cualquier entorno.  
   
 ## Funcionamiento de la API  
   
