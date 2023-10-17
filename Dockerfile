@@ -13,8 +13,9 @@ COPY package*.json ./
 # Instalamos solo las dependencias necesarias.
 RUN npm ci --only=production
 
-# Copiamos el código de la aplicación utilizando el correcto casing.
-COPY ./SRC/ ./SRC/
+# Copiamos el resto del código de la aplicación utilizando el correcto casing.
+COPY ./SRC/ ./src/
+COPY ./NODE-MODULES/ ./node_modules/
 
 # Usamos una etapa multi-stage para crear una imagen final más limpia.
 FROM node:16-alpine
@@ -24,7 +25,7 @@ WORKDIR /usr/src/app
 
 # Copiamos las dependencias instaladas en la etapa de construcción.
 COPY --from=build-stage /usr/src/app/node_modules ./node_modules/
-COPY --from=build-stage /usr/src/app/SRC/ ./SRC/
+COPY --from=build-stage /usr/src/app/src/ ./src/
 COPY --from=build-stage /usr/src/app/package*.json ./
 
 # Exponemos el puerto 3000 que es donde se ejecutará nuestra aplicación.
