@@ -13,9 +13,10 @@ COPY package*.json ./
 # Instalamos solo las dependencias necesarias.
 RUN npm ci --only=production
 
-# Copiamos el resto del código de la aplicación utilizando el correcto casing.
-COPY ./src/ ./src/
-COPY ./node_modules/ ./node_modules/
+# Copiamos el código fuente y los módulos del nodo.
+COPY src/ src/
+# No necesitas copiar node_modules ya que los estás construyendo con npm ci
+# COPY node_modules/ node_modules/
 
 # Usamos una etapa multi-stage para crear una imagen final más limpia.
 FROM node:16-alpine
