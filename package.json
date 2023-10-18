@@ -7,20 +7,21 @@
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
     "lint": "eslint src/**/*.js",
-    "test": "jest",  
+    "test": "jest",
     "prod": "NODE_ENV=production node src/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "mongoose": "^7.6.2"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1",
-    "eslint": "^7.32.0", 
-    "jest": "^27.2.4" 
+    "eslint": "^7.32.0",
+    "jest": "^27.2.4",
+    "nodemon": "^3.0.1"
   }
 }
