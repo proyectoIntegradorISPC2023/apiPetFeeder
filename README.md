@@ -6,11 +6,11 @@ La API miapipet sirve como backend para una solución completa que permite a los
   
 petFeederAPI/  
 │  
-├── DOCS/  
+├── docs/  
 │  
-├── NODE-MODULES/    
+├── node_modules/    
 │  
-├── SRC/  
+├── src/  
 │   ├── config/                  # Configuración y conexión con MongoDB  
 │   ├── controllers/             # Controladores para gestionar la lógica de la API  
 │   ├── middleware/              # Middleware para autenticación y otros  
@@ -20,12 +20,14 @@ petFeederAPI/
 │   ├── app.js                   # Configuración principal de Express  
 │   └── index.js                 # Punto de entrada, inicio del servidor  
 │  
-├── TESTS/  
+├── tests/  
 │  
 ├── .gitignore  
 ├── .dockerignore    
 │  
 ├── Dockerfile    
+│  
+├── .env
 │  
 ├── package-lock.json    
 ├── package.json    
