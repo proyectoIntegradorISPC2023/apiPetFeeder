@@ -14,8 +14,8 @@ COPY package*.json ./
 RUN npm ci --only=production
 
 # Copiamos el resto del código de la aplicación utilizando el correcto casing.
-COPY ./SRC/ ./src/
-COPY ./NODE-MODULES/ ./node_modules/
+COPY ./src/ ./src/
+COPY ./node_modules/ ./node_modules/
 
 # Usamos una etapa multi-stage para crear una imagen final más limpia.
 FROM node:16-alpine
